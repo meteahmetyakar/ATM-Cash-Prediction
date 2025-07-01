@@ -80,14 +80,6 @@ Both methods are compared to baseline regressors, and the best-performing model 
    cd ATM-Cash-Level-Prediction
    ```
 
-2. **Create environment & install**  
-   ```bash
-   python3 -m venv env
-   source env/bin/activate    # Linux/macOS
-   env\Scripts\activate      # Windows
-   pip install -r requirements.txt
-   ```
-
 ---
 
 ## ▶️ Usage
@@ -122,7 +114,6 @@ Both methods are compared to baseline regressors, and the best-performing model 
 ├── preliminary.py              # Exploratory data analysis and initial plots
 ├── preprocess.py               # Data cleaning and feature engineering
 ├── updated_ATM.csv             # Raw transaction dataset
-├── requirements.txt            # Python dependencies
 └── README.md                   # Project overview and instructions
 ```
 
