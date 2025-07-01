@@ -61,14 +61,14 @@ Both methods are compared to baseline regressors, and the best-performing model 
 
 ## 📊 Evaluation
 
-Model performance metrics on the test set:
-- **RMSE:** 0.36
-- **MAE:** 0.28
-- **R²:** 0.86
+- **Actual vs Prediction Values**
+<img src="https://github.com/meteahmetyakar/ATM-Cash-Prediction/blob/main/images/actual-prediction-values.png"/>
 
-See visualizations in the `plots/` folder:
-- `actual_vs_predicted.png`
-- `error_distribution.png`
+- **Error Distribution**
+<img src="https://github.com/meteahmetyakar/ATM-Cash-Prediction/blob/main/images/error-distribution.png"/>
+
+- **Metrics**
+<img src="https://github.com/meteahmetyakar/ATM-Cash-Prediction/blob/main/images/metrics.png"/>
 
 ---
 
@@ -92,19 +92,24 @@ See visualizations in the `plots/` folder:
 
 ## ▶️ Usage
 
-1. **Prepare data**  
+1. **Preprocess data**  
    ```bash
-   python scripts/preprocess.py --input data/raw.csv --output data/processed.csv
+   python preprocess.py
    ```
 
-2. **Train model**  
+2. **Run preliminary analysis**  
    ```bash
-   python scripts/train_model.py --data data/processed.csv --model models/best_model.pkl
+   python preliminary.py
    ```
 
-3. **Evaluate**  
+3. **Train model**  
    ```bash
-   python scripts/evaluate.py --model models/best_model.pkl --test data/test.csv --output reports/metrics.json
+   python DecisionTreeRegressor.py
+   ```
+
+4. **Make predictions**  
+   ```bash
+   python predict.py
    ```
 
 ---
@@ -112,40 +117,13 @@ See visualizations in the `plots/` folder:
 ## 📂 File Structure
 
 ```
-├── data/
-│   ├── raw.csv
-│   └── processed.csv
-├── plots/
-│   ├── actual_vs_predicted.png
-│   └── error_distribution.png
-├── scripts/
-│   ├── preprocess.py
-│   ├── train_model.py
-│   └── evaluate.py
-├── models/
-│   └── best_model.pkl
-├── requirements.txt
-└── README.md
+├── DecisionTreeRegressor.py    # Model training with BOTC & Bagging
+├── predict.py                  # Script to generate and save predictions
+├── preliminary.py              # Exploratory data analysis and initial plots
+├── preprocess.py               # Data cleaning and feature engineering
+├── updated_ATM.csv             # Raw transaction dataset
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project overview and instructions
 ```
-
----
-
-## 🧩 Troubleshooting
-
-| Issue                             | Solution                                                                |
-|-----------------------------------|-------------------------------------------------------------------------|
-| Missing dependencies              | `pip install -r requirements.txt`                                       |
-| Holiday encoding errors           | Verify `holidays` library version and correct country settings.         |
-| Model file not found              | Ensure training completed and `models/best_model.pkl` exists.           |
-| Unexpected performance drop       | Check feature distributions and retrain with updated data.              |
-
----
-
-## 🤝 Acknowledgments
-
-- **Dataset:** City Union Bank transaction logs  
-- **Libraries:** scikit-learn, pandas, holidays  
-- **Author:** Mete Ahmet Yakar  
-- **Advisor:** Dr. Jane Doe  
 
 ---
