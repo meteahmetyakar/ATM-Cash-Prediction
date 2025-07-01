@@ -61,7 +61,7 @@ Both methods are compared to baseline regressors, and the best-performing model 
 
 ## 📊 Evaluation
 
-- **Actual vs Prediction Values**
+- **Actual vs Predicted Values**
 <img src="https://github.com/meteahmetyakar/ATM-Cash-Prediction/blob/main/images/actual-prediction-values.png"/>
 
 - **Error Distribution**
