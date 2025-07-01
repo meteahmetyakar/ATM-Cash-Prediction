@@ -1,4 +1,4 @@
-# 📌 ATM Cash Level Prediction
+# 📌 ATM Cash Prediction
 
 A machine learning system to forecast the optimal cash level for Automated Teller Machines (ATMs), reducing operational costs and improving customer satisfaction by preventing cash shortages and overstocking.
 
