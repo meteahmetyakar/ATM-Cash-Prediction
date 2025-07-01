@@ -76,8 +76,8 @@ Both methods are compared to baseline regressors, and the best-performing model 
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/meteahmetyakar/ATM-Cash-Level-Prediction.git
-   cd ATM-Cash-Level-Prediction
+   git clone https://github.com/meteahmetyakar/ATM-Cash-Prediction.git
+   cd ATM-Cash-Prediction
    ```
 
 ---
